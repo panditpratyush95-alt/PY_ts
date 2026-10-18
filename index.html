@@ -2,297 +2,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Terms of Service for py and PyDeca.">
-    <title>Terms of Service | py</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms of Service for py and PyDeca.">
+  <title>Terms of Service | py</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <style>
+    :root {
+      --blue: #1769e0;
+      --ink: #17191f;
+      --muted: #5b6472;
+      --background: #f6f8fc;
+      --border: #b7d0f6;
+    }
 
-        body {
-            margin: 0;
-            background: #f5f5f5;
-            color: #111;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.65;
-        }
+    * { box-sizing: border-box; }
 
-        .header {
-            display: grid;
-            grid-template-columns: 160px 1fr;
-            align-items: center;
-            gap: 24px;
-            padding: 28px 36px;
-            background: white;
-            border-bottom: 1px dashed #ddd;
-        }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font: 16px/1.75 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
 
-        .logo {
-            width: 160px;
-            height: 160px;
-            background: black;
-        }
+    header {
+      padding: 38px 20px 20px;
+      text-align: center;
+    }
 
-        .logo svg {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
+    .logo {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      background: #050608;
+      border-radius: 8px;
+    }
 
-        .heading {
-            text-align: center;
-        }
+    .logo span {
+      color: #2583ff;
+      font-size: 34px;
+      font-weight: 800;
+    }
 
-        h1 {
-            display: inline;
-            background: #1557d5;
-            color: white;
-            font-size: clamp(30px, 5vw, 68px);
-            line-height: 1.3;
-            padding: 0 6px;
-        }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.2;
+      letter-spacing: -1.5px;
+    }
 
-        main {
-            max-width: 1200px;
-            margin: 32px auto;
-            padding: 35px;
-            background: white;
-            border: 3px solid #4c83ff;
-        }
+    h1 span { color: var(--blue); }
+    .subtitle { color: var(--muted); }
 
-        h2 {
-            font-size: clamp(23px, 3vw, 34px);
-            line-height: 1.3;
-            margin-top: 32px;
-        }
+    .rule {
+      max-width: 900px;
+      margin: 26px auto 0;
+      border: 0;
+      border-top: 2px dashed #a9bddb;
+    }
 
-        main h2:first-child {
-            margin-top: 8px;
-        }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-        p, li {
-            font-size: 18px;
-        }
+    a {
+      color: #075dcc;
+      overflow-wrap: anywhere;
+    }
 
-        .updated {
-            color: #555;
-        }
+    main {
+      width: min(900px, calc(100% - 32px));
+      margin: 24px auto 50px;
+      padding: clamp(22px, 5vw, 46px);
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 12px 36px #10264a0a;
+    }
 
-        a {
-            color: #1557c8;
-        }
+    h2 {
+      margin: 32px 0 8px;
+      font-size: 1.2rem;
+    }
 
-        footer {
-            text-align: center;
-            padding: 24px;
-            color: #555;
-        }
+    h2:first-child { margin-top: 0; }
+    li, p { color: #343b47; }
 
-        @media (max-width: 600px) {
-            .header {
-                grid-template-columns: 72px 1fr;
-                gap: 12px;
-                padding: 16px;
-            }
+    .notice {
+      padding: 14px 16px;
+      border-left: 4px solid var(--blue);
+      background: #f0f6ff;
+      border-radius: 6px;
+    }
 
-            .logo {
-                width: 72px;
-                height: 72px;
-            }
+    footer {
+      padding: 0 16px 30px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+    }
 
-            main {
-                margin: 16px 12px;
-                padding: 20px 16px;
-            }
-
-            p, li {
-                font-size: 16px;
-            }
-        }
-    </style>
+    @media (max-width: 600px) {
+      body { font-size: 15px; }
+      main {
+        width: calc(100% - 20px);
+        padding: 22px 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<header class="header">
-    <div class="logo">
-        <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"
-             role="img" aria-label="py pixel logo">
-            <rect width="160" height="160" fill="black"/>
-            <g fill="#1677ff">
-                <rect x="28" y="48" width="104" height="48"/>
-                <rect x="4" y="64" width="152" height="16"/>
-                <rect x="32" y="96" width="16" height="16"/>
-                <rect x="52" y="96" width="12" height="20"/>
-                <rect x="96" y="96" width="12" height="20"/>
-                <rect x="116" y="96" width="16" height="16"/>
-            </g>
-            <g fill="white">
-                <rect x="44" y="62" width="9" height="15"/>
-                <rect x="107" y="62" width="9" height="15"/>
-            </g>
-        </svg>
+  <header>
+    <div class="logo" aria-label="py logo">
+      <span>py</span>
     </div>
 
-    <div class="heading">
-        <h1>Terms of Service</h1>
-    </div>
-</header>
+    <h1><span>Terms</span> of Service</h1>
+    <p class="subtitle">py / PyDeca · Effective date: October 18, 2026</p>
 
-<main>
-    <h2>Terms of Service for py</h2>
+    <hr class="rule">
 
-    <p class="updated">
-        <strong>Last updated:</strong> October 18, 2026
-    </p>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./privacy-policy.html">Privacy Policy</a>
+    </nav>
+  </header>
 
-    <h2>1. Acceptance of Terms</h2>
-    <p>
-        Welcome to py and PyDeca (collectively, the "Application").
-        These Terms of Service ("Terms") govern your access to and use of
-        the desktop application, web interface, AI assistant features,
-        automation tools, and related services.
-    </p>
-    <p>
-        By accessing or using the Application, you agree to these Terms.
-        If you do not agree, stop using the Application.
-    </p>
-    <p>
-        If you are not legally permitted to agree to these Terms independently,
-        obtain any permission required from a parent, guardian, or other
-        appropriate person.
+  <main>
+    <p class="notice">
+      These terms describe general rules for using py / PyDeca. Replace
+      the contact placeholder and make sure the terms accurately reflect
+      your application before publishing.
     </p>
 
-    <h2>2. Acceptable Use</h2>
+    <h2>1. Agreement</h2>
     <p>
-        You agree to use the Application lawfully and responsibly. You must
-        not use it to violate applicable laws, infringe others' rights,
-        disrupt services, bypass access controls, or perform unauthorized
-        or harmful activities.
+      These Terms of Service apply to your use of py (desktop application)
+      and PyDeca (web application), together referred to as the “App.”
+      By using the App, you agree to these Terms. If you do not agree,
+      do not use the App.
     </p>
 
-    <h2>3. AI-Generated Content</h2>
+    <h2>2. About the App</h2>
     <p>
-        AI-generated responses can be inaccurate, incomplete, outdated,
-        or misleading. You are responsible for checking outputs before
-        relying on them or sharing them with others.
-    </p>
-    <p>
-        AI outputs are not a substitute for professional legal, medical,
-        financial, or other expert advice.
+      The App provides AI-assisted features. Depending on the version and
+      configuration, these may include chat, local AI processing, cloud AI
+      integrations, and optional Google Drive access. Features may differ
+      between versions and may change over time.
     </p>
 
-    <h2>4. Automation and Permissions</h2>
+    <h2>3. Your responsibilities</h2>
+    <ul>
+      <li>Use the App lawfully and follow the terms of connected services.</li>
+      <li>Respect other people's privacy and intellectual property rights.</li>
+      <li>Review generated answers, code, and other output before relying on it.</li>
+      <li>Do not submit content you are not authorized to share.</li>
+      <li>Keep your device, account credentials, and API keys secure.</li>
+    </ul>
+
+    <h2>4. AI-generated output</h2>
     <p>
-        Automation features may interact with files, applications, websites,
-        or other system resources according to the permissions and settings
-        you configure.
-    </p>
-    <p>
-        Review proposed actions carefully. Keep backups of important data
-        and do not grant permissions you do not understand.
+      AI-generated output may be inaccurate, incomplete, outdated, or
+      unsuitable for your needs. You are responsible for reviewing output
+      before using it, especially code or information used for important
+      decisions. The App does not guarantee that every generated response
+      is correct or fit for a particular purpose.
     </p>
 
-    <h2>5. API Keys and Third-Party Services</h2>
+    <h2>5. Google Drive and third-party services</h2>
     <p>
-        You are responsible for API keys and third-party accounts you configure.
-        Keep credentials private and follow the relevant provider's terms,
-        usage limits, and billing requirements.
+      If you connect Google Drive, the App may access data allowed by the
+      Google permissions you approve and the features you use. You can
+      revoke authorization through your
+      <a href="https://myaccount.google.com/permissions"
+         target="_blank" rel="noopener noreferrer">
+        Google Account permissions
+      </a>.
     </p>
     <p>
-        Third-party services may change, become unavailable, or impose their
-        own restrictions independently of py / PyDeca.
+      When you use a cloud AI feature, prompts and content you include may
+      be sent to the selected provider. Google and AI providers have their
+      own terms and policies. Review the
+      <a href="./privacy-policy.html">Privacy Policy</a>
+      before submitting confidential content.
     </p>
 
-    <h2>6. User Content</h2>
+    <h2>6. API keys and costs</h2>
     <p>
-        You retain rights you already have in content you submit. You are
-        responsible for ensuring that you have the necessary rights and
-        permissions to submit, upload, or process that content.
+      If you provide your own API key, you are responsible for protecting
+      it and for any usage, charges, quotas, or restrictions associated
+      with the relevant provider account. Do not publish API keys in
+      public repositories or share them with others. Third-party services
+      may charge fees or impose usage limits.
     </p>
 
-    <h2>7. Intellectual Property</h2>
+    <h2>7. Availability and changes</h2>
     <p>
-        The Application's name, design, code, and other materials may be
-        protected by intellectual-property laws. Do not misrepresent ownership
-        or redistribute protected materials unless authorized by the applicable
-        licence or law.
+      The App is provided on an “as available” basis. Features may be
+      changed, suspended, or discontinued. Interruptions may occur due to
+      network, device, provider, or maintenance issues. No particular
+      uptime or response time is guaranteed.
     </p>
 
-    <h2>8. Availability and Updates</h2>
+    <h2>8. Intellectual property and user content</h2>
     <p>
-        Features may be updated, changed, suspended, or discontinued.
-        We do not guarantee uninterrupted service, compatibility with every
-        device, or permanent availability of every feature.
+      You remain responsible for content you submit and for ensuring you
+      have the necessary rights to use it. You are responsible for
+      deciding whether generated output is suitable for your intended use,
+      subject to applicable law and third-party terms.
     </p>
 
-    <h2>9. Disclaimer of Warranties</h2>
+    <h2>9. Disclaimer</h2>
     <p>
-        To the extent permitted by applicable law, the Application is provided
-        "as is" and "as available", without warranties of any kind.
-        Nothing in these Terms removes a right or protection that cannot
-        legally be excluded.
+      To the extent permitted by applicable law, the App is provided
+      without warranties of any kind, express or implied. The developer
+      does not guarantee that the App will be error-free, uninterrupted,
+      or suitable for every purpose.
     </p>
 
-    <h2>10. Limitation of Liability</h2>
+    <h2>10. Limitation of liability</h2>
     <p>
-        To the extent permitted by applicable law, the project maintainer
-        is not responsible for indirect or consequential losses arising
-        from the use of the Application. This provision does not limit
-        liability where such a limitation is prohibited by law.
+      To the extent permitted by applicable law, the developer is not
+      responsible for indirect, incidental, special, or consequential
+      losses arising from use of the App or third-party services. Nothing
+      in these Terms excludes liability that cannot legally be excluded.
     </p>
 
-    <h2>11. Suspension and Termination</h2>
+    <h2>11. Privacy</h2>
     <p>
-        You may stop using the Application at any time. Hosted or connected
-        features may be restricted when necessary for security, compliance,
-        or service discontinuation.
+      Your use of the App is also governed by the
+      <a href="./privacy-policy.html">Privacy Policy</a>, which explains
+      Google Drive access, cloud AI processing, and the intended local
+      storage of chat history.
     </p>
 
-    <h2>12. Privacy Policy</h2>
+    <h2>12. Updates to these Terms</h2>
     <p>
-        Your use of the Application is also subject to our
-        <a href="privacy-policy.html">Public Privacy Policy</a>.
-        Please review it to understand how information may be handled.
+      These Terms may be updated as the App changes. The effective date
+      at the top indicates the latest revision. Material changes should
+      be reflected in the published terms.
     </p>
 
-    <h2>13. Changes to These Terms</h2>
+    <h2>13. Contact</h2>
     <p>
-        These Terms may be updated as the Application evolves. The date above
-        should be updated when appropriate. Continued use after a change
-        indicates acceptance of the revised Terms to the extent permitted
-        by applicable law.
+      Questions about these Terms:
+      <strong>[YOUR CONTACT EMAIL]</strong>
     </p>
+  </main>
 
-    <h2>14. Governing Law</h2>
-    <p>
-        These Terms are subject to applicable laws. Any specific governing-law
-        or dispute-resolution provisions should be reviewed and completed
-        to reflect the project maintainer's circumstances and legal requirements.
-    </p>
-
-    <h2>15. Contact</h2>
-    <p>
-        For questions about these Terms, contact the project maintainer
-        through the contact method published on the official py / PyDeca
-        website or repository.
-    </p>
-
-    <p>
-        <em>
-            This document is a general template, not legal advice.
-            Review it for accuracy and applicable legal requirements
-            before publication.
-        </em>
-    </p>
-</main>
-
-<footer>
-    &copy; 2026 py / PyDeca — Terms of Service
-</footer>
-
+  <footer>
+    © 2026 py / PyDeca ·
+    <a href="./privacy-policy.html">Privacy Policy</a>
+  </footer>
 </body>
 </html>
